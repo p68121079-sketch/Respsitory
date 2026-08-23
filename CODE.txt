@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+long long countLeap(long long x) {
+    if (x < 0) return 0;
+
+    return x / 4 + 1 - x / 100 + x / 400;
+}
+
+int main() {
+    long long L, R;
+    cin >> L >> R;
+
+    cout << countLeap(R) - countLeap(L - 1);
+
+    return 0;
+}
